@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../base.css"/>
+    <style>
+        div:last-child {
+            width: 80%;
+            border: 1px solid gray;
+            margin: 1em;
+        }
+
+        img {
+            /*width: 100%; - This will pixelate the image at large sizes ... */
+            max-width: 100%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div>Scaling inline images - max size of image or 100% of parent : whichever is smaller</div>
+<div><img src="../linus.png" alt="Linus"/></div>
+</body>
+</html>

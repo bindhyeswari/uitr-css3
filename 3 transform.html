@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.square {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            transition: all 500ms ease;
+        }
+
+        div.square:hover {
+            background-color: darkred;
+            transform: translateX(100px) rotate(25deg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="square"></div>
+    </div>
+
+</body>
+</html>

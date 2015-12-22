@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        div.ball {
+            height: 30px;
+            width: 30px;
+            background-color: #c37a2d;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 5px;
+
+
+
+            /*transition: all 500ms ease;*/
+        }
+
+        div.floor {;
+            position: fixed;
+            top: 25%;
+            height: 200px;
+            width: 200px;
+            background: linear-gradient(180deg, red 50%, darkred 50%);
+        }
+
+        div.floor:hover + div.ball {
+            animation: kf_ball_animation 2000ms ease infinite alternate;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes kf_ball_animation {
+            0% {
+                top: 350px;
+                /*left: calc(50% - 100px);*/
+
+            }
+            100% {
+                top: 5px;
+                /*left: 50%;*/
+
+            }
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <div class="floor"></div>
+    <div class="ball"></div>
+
+</body>
+</html>

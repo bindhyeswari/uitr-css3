@@ -1,0 +1,22 @@
+div.responsive-div {
+    background-color: red;
+    color: white;
+    padding: 1em;
+}
+
+h1.heading {
+    padding-top: 0.5em;
+}
+
+img.responsive {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Overrriding Bootstrap CSS **/
+
+.container {
+    padding: 0.5rem;
+    margin: 0.3rem; /* custom view - padding and margin */
+}
+

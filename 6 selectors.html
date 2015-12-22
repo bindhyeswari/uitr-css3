@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Selectors</title>
+    <style>
+
+        /* pseudo classes */
+
+        li {
+            text-transform: uppercase;
+        }
+
+        li:first-child {
+            font-family: "Avenir Next";
+        }
+
+        div:nth-child(2) {
+            background: red;
+        }
+
+        div:nth-of-type(2) {
+            background-color: green;
+        }
+
+        ul {
+            margin-bottom: 800px;
+        }
+
+        div#data {
+            margin-bottom: 600px;
+        }
+
+        div#data:target {
+            animation: kf 500ms ease 2 alternate;
+        }
+
+        @keyframes kf {
+            0% {
+                background-color: white;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+
+        li:empty {
+            background-color: gray;
+        }
+
+        li > :not(div) {
+            background-color: blue;
+        }
+
+
+
+
+        /* pseudo elements */
+
+        li:first-child::before { // ::after
+            content: 'Manali';
+            display: block;
+            background-color: blue;
+            color: white;
+        }
+
+        div:first-child::first-letter {
+            font-size: 5em;
+            font-weight: bold;
+        }
+
+        p::first-line {
+            background-color: red;
+        }
+
+        ::selection {
+            background-color: #9a0208;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="#data">Go to a div with an id of data</a>
+
+    <ul>
+        <li>
+            <div>
+                Div 1
+            </div>
+            <span>
+                Span 1
+            </span>
+            <div>
+                Div 2
+            </div>
+            <p>
+                Para 1
+            </p>
+            <p>
+                Para 2 - first line <br>
+                Second line
+            </p>
+
+        </li>
+        <li>second</li>
+        <li>third</li>
+        <li></li>
+        <li>FouRTH</li>
+    </ul>
+
+    <div id="data">div data</div>
+
+    <div id="info">div info</div>
+
+</body>
+</html>
